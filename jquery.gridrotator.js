@@ -324,11 +324,11 @@
 
 			// we will choose the number of rows/columns according to the container's width and the values set in the plugin options 
 			switch( true ) {
-				case ( c_w < 240 ) : this.rows = this.options.w240.rows; this.columns = this.options.w240.columns; break;
-				case ( c_w < 320 ) : this.rows = this.options.w320.rows; this.columns = this.options.w320.columns; break;
-				case ( c_w < 480 ) : this.rows = this.options.w480.rows; this.columns = this.options.w480.columns; break;
-				case ( c_w < 768 ) : this.rows = this.options.w768.rows; this.columns = this.options.w768.columns; break;
-				case ( c_w < 1024 ) : this.rows = this.options.w1024.rows; this.columns = this.options.w1024.columns; break;
+				case ( c_w <= 240 ) : this.rows = this.options.w240.rows; this.columns = this.options.w240.columns; break;
+				case ( c_w <= 320 ) : this.rows = this.options.w320.rows; this.columns = this.options.w320.columns; break;
+				case ( c_w <= 480 ) : this.rows = this.options.w480.rows; this.columns = this.options.w480.columns; break;
+				case ( c_w <= 768 ) : this.rows = this.options.w768.rows; this.columns = this.options.w768.columns; break;
+				case ( c_w <= 1024 ) : this.rows = 10; this.columns = 5; break;
 				default : this.rows = this.options.rows; this.columns = this.options.columns; break;
 			}
 
